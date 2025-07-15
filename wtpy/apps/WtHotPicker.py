@@ -181,7 +181,7 @@ class WtCacheMonExchg(WtCacheMon):
         '''
 
         dtStr = curDT.strftime('%Y%m%d')
-        content = httpGet("http://www.shfe.com.cn/data/dailydata/kx/kx%s.dat" % (dtStr))
+        content = httpGet("https://www.shfe.com.cn/data/tradedata/future/dailydata/kx%s.dat" % (dtStr))
         if len(content) == 0:
             return None
         
@@ -306,7 +306,8 @@ class WtCacheMonExchg(WtCacheMon):
             "粳米":"rr",
             "苯乙烯":"eb",
             "液化石油气":"pg",
-            "生猪":"lh"
+            "生猪":"lh",
+            "原木":"lg"
         }
 
         url = 'http://www.dce.com.cn/publicweb/quotesdata/dayQuotesCh.html'
